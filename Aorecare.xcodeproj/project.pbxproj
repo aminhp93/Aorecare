@@ -25,6 +25,7 @@
 		2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */; };
 		27A7A5CF1DE4EF0B004859EB /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5CE1DE4EF0B004859EB /* SideBarTableViewController.swift */; };
 		27A7A5D11DE4F35E004859EB /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D01DE4F35E004859EB /* SideBar.swift */; };
+		27A7A5D31DE50874004859EB /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D21DE50874004859EB /* AccountSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLocationViewController.swift; sourceTree = "<group>"; };
 		27A7A5CE1DE4EF0B004859EB /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideBarTableViewController.swift; path = ../SideBarTableViewController.swift; sourceTree = "<group>"; };
 		27A7A5D01DE4F35E004859EB /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		27A7A5D21DE50874004859EB /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */,
 				274796691DE378A60094F610 /* DoctorViewController.swift */,
 				274796671DE2B9430094F610 /* PatientViewController.swift */,
+				27A7A5D21DE50874004859EB /* AccountSettingViewController.swift */,
 				274796331DE2A7EF0094F610 /* Assets.xcassets */,
 				274796351DE2A7EF0094F610 /* LaunchScreen.storyboard */,
 				274796381DE2A7EF0094F610 /* Info.plist */,
@@ -313,6 +316,7 @@
 				2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */,
 				2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */,
 				27A7A5D11DE4F35E004859EB /* SideBar.swift in Sources */,
+				27A7A5D31DE50874004859EB /* AccountSettingViewController.swift in Sources */,
 				274796681DE2B9430094F610 /* PatientViewController.swift in Sources */,
 				2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */,
 				27A7A5CF1DE4EF0B004859EB /* SideBarTableViewController.swift in Sources */,

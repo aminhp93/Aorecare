@@ -12,10 +12,6 @@ import MapKit
 
 class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, SideBarDelegate {
     var sideBar:SideBar = SideBar()
-    
-    func sideBarDidSelectButtonAtIndex(_ index: Int) {
-        
-    }
 
     var locationManager = CLLocationManager()
     
@@ -224,9 +220,15 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         // Do any additional setup after loading the view.
         
         
-        sideBar = SideBar(sourceView: self.view, menuItems: ["first", "second", "third"])
+        sideBar = SideBar(sourceView: self.view, menuItems: ["Account Settings", "Payment", "Free Appoinment", "Help"])
         sideBar.delegate = self
         
+    }
+    
+    func sideBarDidSelectButtonAtIndex(_ index: Int) {
+        if index == 0{
+            performSegue(withIdentifier: "accountSetting", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -234,17 +236,6 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     func displayAlert(title:String, message:String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

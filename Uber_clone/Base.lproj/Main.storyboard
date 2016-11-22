@@ -209,7 +209,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="GP9-kU-jIE">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="v7k-gq-tXJ">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="v7k-gq-tXJ">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="j00-DL-Yrs"/>
                                             </connections>
@@ -235,14 +235,111 @@
                     <connections>
                         <outlet property="callADoctor" destination="Hzt-ip-v8j" id="ufi-qj-K89"/>
                         <outlet property="mapView" destination="Mad-PU-9wl" id="l5x-qi-PoF"/>
+                        <segue destination="sTY-df-k4h" kind="show" identifier="accountSetting" id="Aa7-Gv-8iX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzS-a9-oOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="-536.58170914542734"/>
         </scene>
+        <!--Account Setting View Controller-->
+        <scene sceneID="kUo-4V-M6O">
+            <objects>
+                <viewController id="sTY-df-k4h" customClass="AccountSettingViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yAL-BC-4iz"/>
+                        <viewControllerLayoutGuide type="bottom" id="X7e-wR-7O9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J64-6i-UCT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paN-ov-utx">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Account Setting" id="DzG-w2-ozx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" systemItem="cancel" id="Je0-ZI-DKI">
+                                            <connections>
+                                                <segue destination="3Fb-bA-c4a" kind="show" id="HHC-Oy-BIQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" systemItem="done" id="STK-5U-E5v"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="92" translatesAutoresizingMaskIntoConstraints="NO" id="cfK-D0-uxZ">
+                                <rect key="frame" x="0.0" y="137" width="375" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cfK-D0-uxZ" id="xBh-G2-9lz">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-Q3-IDM">
+                                <rect key="frame" x="0.0" y="294" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vd4-Q3-IDM" id="41p-Zj-keW">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="NU0-gq-2rg">
+                                <rect key="frame" x="0.0" y="359" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NU0-gq-2rg" id="gaA-hd-wis">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-DS-IBh">
+                                <rect key="frame" x="0.0" y="486" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S2V-DS-IBh" id="zF7-XJ-PxE">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="Wfe-FS-Xkt">
+                                <rect key="frame" x="0.0" y="550" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wfe-FS-Xkt" id="yYZ-lE-CRb">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFz-cL-fut">
+                                <rect key="frame" x="31" y="237" width="111" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gS-TG-2UM">
+                                <rect key="frame" x="31" y="433" width="111" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="businessCell" destination="S2V-DS-IBh" id="cCW-a2-4AV"/>
+                        <outlet property="homeCell" destination="Vd4-Q3-IDM" id="tVP-0N-XJG"/>
+                        <outlet property="nameCell" destination="cfK-D0-uxZ" id="3ZJ-DH-gBS"/>
+                        <outlet property="personalCell" destination="Wfe-FS-Xkt" id="Ggi-ZE-4ZS"/>
+                        <outlet property="workCell" destination="NU0-gq-2rg" id="tW1-pJ-NUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9d-aD-2sF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.5999999999999" y="-663.41829085457277"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="j00-DL-Yrs"/>
+        <segue reference="HHC-Oy-BIQ"/>
     </inferredMetricsTieBreakers>
 </document>
