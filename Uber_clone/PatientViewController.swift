@@ -10,7 +10,12 @@ import UIKit
 import Parse
 import MapKit
 
-class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, SideBarDelegate {
+    var sideBar:SideBar = SideBar()
+    
+    func sideBarDidSelectButtonAtIndex(_ index: Int) {
+        
+    }
 
     var locationManager = CLLocationManager()
     
@@ -192,6 +197,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     }
     
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -216,6 +222,11 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         })
 
         // Do any additional setup after loading the view.
+        
+        
+        sideBar = SideBar(sourceView: self.view, menuItems: ["first", "second", "third"])
+        sideBar.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
