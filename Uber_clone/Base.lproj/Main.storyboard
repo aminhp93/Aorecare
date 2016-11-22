@@ -42,10 +42,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-ze-c8m">
-                                <rect key="frame" x="163" y="226" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySh-ZU-cUX">
                                 <rect key="frame" x="78" y="226" width="59" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,12 +79,16 @@
                                     <action selector="switchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePA-rS-pne"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mog-AX-S9x">
+                                <rect key="frame" x="162" y="226" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="driverLabel" destination="34h-5Y-1wy" id="Lcf-g6-Lcu"/>
-                        <outlet property="isDriverSwitch" destination="LJ8-ze-c8m" id="DpE-fb-03p"/>
+                        <outlet property="isDoctorSwitch" destination="mog-AX-S9x" id="Aja-SO-25T"/>
                         <outlet property="passwordTextField" destination="Tua-3d-9pd" id="Yze-xg-z9a"/>
                         <outlet property="riderLabel" destination="ySh-ZU-cUX" id="qLN-Tm-dzq"/>
                         <outlet property="signUpOrLogIn" destination="G4u-Iw-Pc7" id="J4I-KH-DTF"/>
@@ -217,23 +217,23 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MM-Yj-Dey">
-                                <rect key="frame" x="74" y="548" width="228" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Call A Doctor"/>
-                                <connections>
-                                    <action selector="callAnUber:" destination="3Fb-bA-c4a" eventType="touchUpInside" id="QQx-P0-vbp"/>
-                                </connections>
-                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-PU-9wl">
                                 <rect key="frame" x="0.0" y="133" width="375" height="372"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzt-ip-v8j">
+                                <rect key="frame" x="56" y="544" width="264" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Call A Doctor"/>
+                                <connections>
+                                    <action selector="callADoctor:" destination="3Fb-bA-c4a" eventType="touchUpInside" id="cva-72-ozx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="callAnUber" destination="7MM-Yj-Dey" id="ty1-bb-iEQ"/>
+                        <outlet property="callADoctor" destination="Hzt-ip-v8j" id="ufi-qj-K89"/>
                         <outlet property="mapView" destination="Mad-PU-9wl" id="l5x-qi-PoF"/>
                     </connections>
                 </viewController>

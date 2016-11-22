@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var isDriverSwitch: UISwitch!
+    @IBOutlet weak var isDoctorSwitch: UISwitch!
     
     @IBOutlet weak var signUpOrLogIn: UIButton!
     
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
                 user.username = usernameTextField.text
                 user.password = passwordTextField.text
                 
-                user["isDriver"] = isDriverSwitch.isOn
+                user["isDriver"] = isDoctorSwitch.isOn
                 user.signUpInBackground(block: { (success, error) in
                     if let error = error {
                         var displayErrorMessage = "Please try again later"
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             
             signUpMode = false
             
-            isDriverSwitch.isHidden = true
+            isDoctorSwitch.isHidden = true
             
             riderLabel.isHidden = true
             
@@ -108,7 +108,7 @@ class ViewController: UIViewController {
             
             signUpMode = true
             
-            isDriverSwitch.isHidden = false
+            isDoctorSwitch.isHidden = false
             
             riderLabel.isHidden = false
             

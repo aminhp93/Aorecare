@@ -22,12 +22,11 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var callAnUber: UIButton!
+    @IBOutlet weak var callADoctor: UIButton!
     
-    @IBAction func callAnUber(_ sender: Any) {
-        
+    @IBAction func callADoctor(_ sender: Any) {
         if patientRequestActive {
-            callAnUber.setTitle("Call A Doctor", for: [])
+            callADoctor.setTitle("Call A Doctor", for: [])
             
             patientRequestActive = false
             
@@ -49,37 +48,36 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             
             
         } else {
-        
-        if userLocation.latitude != 0 && userLocation.longitude != 0 {
             
-            patientRequestActive = true
-            
-            let patientRequest = PFObject(className: "PatientRequest")
-        
-            patientRequest["username"] = PFUser.current()?.username
-        
-            patientRequest["location"] = PFGeoPoint(latitude: userLocation.latitude, longitude: userLocation.longitude)
-            
-            patientRequest.saveInBackground(block: { (success, error) in
-                if success {
-                    self.callAnUber.setTitle("Cancel Doctor", for: [])
-                } else {
-                    
-                    self.callAnUber.setTitle("Call A Doctor", for: [])
-                    
-                    self.patientRequestActive = false
-                    
-                    self.displayAlert(title: "Could not call Doctor", message: "Please try again")
-                    
-                }
-            })
-            
-        } else {
-            displayAlert(title: "Could bot call Doctor", message: "Cannot detect your location")
-        }
+            if userLocation.latitude != 0 && userLocation.longitude != 0 {
+                
+                patientRequestActive = true
+                
+                let patientRequest = PFObject(className: "PatientRequest")
+                
+                patientRequest["username"] = PFUser.current()?.username
+                
+                patientRequest["location"] = PFGeoPoint(latitude: userLocation.latitude, longitude: userLocation.longitude)
+                
+                patientRequest.saveInBackground(block: { (success, error) in
+                    if success {
+                        self.callADoctor.setTitle("Cancel Doctor", for: [])
+                    } else {
+                        
+                        self.callADoctor.setTitle("Call A Doctor", for: [])
+                        
+                        self.patientRequestActive = false
+                        
+                        self.displayAlert(title: "Could not call Doctor", message: "Please try again")
+                        
+                    }
+                })
+                
+            } else {
+                displayAlert(title: "Could bot call Doctor", message: "Cannot detect your location")
+            }
         }
     }
-    
 
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -145,7 +143,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                                             
                                             let roundedDistance = round(distance*100)/100
                                             
-                                            self.callAnUber.setTitle("Doctor is \(roundedDistance)km away", for: [])
+                                            self.callADoctor.setTitle("Doctor is \(roundedDistance)km away", for: [])
                                             
                                             let latDelta = abs(doctorLocation.latitude - self.userLocation.latitude) * 2 + 0.005
                                             let lonDelta = abs(doctorLocation.longitude - self.userLocation.longitude) * 2 + 0.005
@@ -200,7 +198,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        callAnUber.isHidden = true
+        callADoctor.isHidden = true
         
         let query = PFQuery(className: "PatientRequest")
         
@@ -211,10 +209,10 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             if let patientRequests = objects {
                 if patientRequests.count > 0 {
                     self.patientRequestActive = true
-                    self.callAnUber.setTitle("Cancel Doctor", for: [])
+                    self.callADoctor.setTitle("Cancel Doctor", for: [])
                 }
             }
-            self.callAnUber.isHidden = false
+            self.callADoctor.isHidden = false
         })
 
         // Do any additional setup after loading the view.
