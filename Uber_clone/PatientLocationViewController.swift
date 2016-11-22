@@ -1,5 +1,5 @@
 //
-//  RiderLocationViewController.swift
+//  PatientLocationViewController.swift
 //  Aorecare
 //
 //  Created by Minh Pham on 11/21/16.
@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import MapKit
 
-class RiderLocationViewController: UIViewController, MKMapViewDelegate {
+class PatientLocationViewController: UIViewController, MKMapViewDelegate {
     
     var requestLocation = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
@@ -21,16 +21,16 @@ class RiderLocationViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var acceptButton: UIButton!
     
     @IBAction func acceptRequestButton(_ sender: Any) {
-    
-        let query = PFQuery(className: "riderRequest")
+        print("Accepted")
+        let query = PFQuery(className: "PatientRequest")
         
         query.whereKey("username", equalTo: requestUsername)
         
         query.findObjectsInBackground { (objects, error) in
-            if let riderRequests = objects{
-                for i in riderRequests{
+            if let patientRequests = objects{
+                for i in patientRequests{
                     
-                    i["driverResponsed"] = PFUser.current()?.username
+                    i["DoctorResponded"] = PFUser.current()?.username
                     i.saveInBackground()
                     
                     let requestCLLocation = CLLocation(latitude: self.requestLocation.latitude, longitude: self.requestLocation.longitude)

@@ -1,5 +1,5 @@
 //
-//  DriverViewController.swift
+//  DoctorViewController.swift
 //  Aorecare
 //
 //  Created by Minh Pham on 11/21/16.
@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class DriverViewController: UITableViewController, CLLocationManagerDelegate {
+class DoctorViewController: UITableViewController, CLLocationManagerDelegate {
     
     var requestUsername = [String]()
     var requestLocation = [CLLocationCoordinate2D]()
@@ -19,12 +19,12 @@ class DriverViewController: UITableViewController, CLLocationManagerDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "driverLogoutSegue"{
+        if segue.identifier == "doctorLogoutSegue"{
             PFUser.logOut()
             self.navigationController?.navigationBar.isHidden = true
             locationManager.stopUpdatingLocation()
-        } else if segue.identifier == "showRiderLocationViewController"{
-            if let destination = segue.destination as? RiderLocationViewController{
+        } else if segue.identifier == "showPatientLocationViewController"{
+            if let destination = segue.destination as? PatientLocationViewController{
                 if let row = tableView.indexPathForSelectedRow?.row{
                     destination.requestLocation = requestLocation[row]
                     destination.requestUsername = requestUsername[row]
@@ -35,12 +35,6 @@ class DriverViewController: UITableViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -54,29 +48,27 @@ class DriverViewController: UITableViewController, CLLocationManagerDelegate {
         if let location = manager.location?.coordinate{
             userLocation = location
             
-            let driverLocationQuery = PFQuery(className: "driverLocation")
+            let doctorLocationQuery = PFQuery(className: "DoctorLocation")
             
-            driverLocationQuery.whereKey("username", equalTo: PFUser.current()?.username)
+            doctorLocationQuery.whereKey("username", equalTo: PFUser.current()?.username)
             
-            driverLocationQuery.findObjectsInBackground(block: { (objects, error) in
-                if let driverLocations = objects {
+            doctorLocationQuery.findObjectsInBackground(block: { (objects, error) in
+                if let doctorLocations = objects {
                     
-                    for i in driverLocations {
-                        i["driverLocation"] = PFGeoPoint(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
+                    for i in doctorLocations {
+                        i["DoctorLocation"] = PFGeoPoint(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
                         
                         i.deleteInBackground()
                     }
-                    let driverLocation = PFObject(className: "driverLocation")
-                    driverLocation["username"] = PFUser.current()?.username
-                    driverLocation["location"] = PFGeoPoint(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
-                    driverLocation.saveInBackground()
-                    print("Save driver location")
-                    
+                    let doctorLocation = PFObject(className: "DoctorLocation")
+                    doctorLocation["username"] = PFUser.current()?.username
+                    doctorLocation["location"] = PFGeoPoint(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
+                    doctorLocation.saveInBackground()
                 }
             })
             
             
-            let query = PFQuery(className: "riderRequest")
+            let query = PFQuery(className: "PatientRequest")
             
             
             query.whereKey("location", nearGeoPoint: PFGeoPoint(latitude: location.latitude, longitude: location.longitude))
@@ -84,14 +76,14 @@ class DriverViewController: UITableViewController, CLLocationManagerDelegate {
             query.limit = 10
             
             query.findObjectsInBackground(block: { (objects, error) in
-                if let riderRequests = objects{
+                if let patientRequests = objects{
                     self.requestUsername.removeAll()
                     self.requestLocation.removeAll()
                     
-                    for i in riderRequests{
+                    for i in patientRequests{
                         if let username = i["username"] as? String{
                             
-                            if i["driverResponsed"] == nil {
+                            if i["DoctorResponded"] == nil {
                                 self.requestUsername.append(username)
                             
                                  self.requestLocation.append(CLLocationCoordinate2D(latitude: (i["location"] as! PFGeoPoint).latitude, longitude: (i["location"] as! PFGeoPoint).longitude))
@@ -132,9 +124,9 @@ class DriverViewController: UITableViewController, CLLocationManagerDelegate {
         
         let driverCLLocation = CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude)
         
-        let riderCLLocation = CLLocation(latitude: requestLocation[indexPath.row].latitude, longitude: requestLocation[indexPath.row].longitude)
+        let patientCLLocation = CLLocation(latitude: requestLocation[indexPath.row].latitude, longitude: requestLocation[indexPath.row].longitude)
         
-        let distance = driverCLLocation.distance(from: riderCLLocation) / 1000
+        let distance = driverCLLocation.distance(from: patientCLLocation) / 1000
         
         let roundedDistance = round(distance * 100)/100
         

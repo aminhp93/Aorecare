@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWK-y9-qfh">
-                                <rect key="frame" x="133" y="359" width="113" height="30"/>
+                                <rect key="frame" x="113" y="359" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Switch To Log In"/>
                                 <connections>
@@ -105,7 +105,7 @@
         <!--Request List-->
         <scene sceneID="ez1-uo-pwm">
             <objects>
-                <tableViewController id="oTd-my-WoP" customClass="DriverViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oTd-my-WoP" customClass="DoctorViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lHi-L2-YKk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ggg-d3-qb5" kind="show" identifier="showRiderLocationViewController" id="scA-Dp-3t9"/>
+                                    <segue destination="Ggg-d3-qb5" kind="show" identifier="showPatientLocationViewController" id="scA-Dp-3t9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,7 +131,7 @@
                     <navigationItem key="navigationItem" title="Request List" id="xRA-fJ-GcD">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="kd7-nz-HHU">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" identifier="driverLogoutSegue" id="Ymu-5j-a51"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="doctorLogoutSegue" id="Ymu-5j-a51"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="1871" y="250"/>
         </scene>
-        <!--Rider Location View Controller-->
+        <!--Patient Location View Controller-->
         <scene sceneID="epl-Rl-prH">
             <objects>
-                <viewController id="Ggg-d3-qb5" customClass="RiderLocationViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ggg-d3-qb5" customClass="PatientLocationViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tcj-Wy-Zob"/>
                         <viewControllerLayoutGuide type="bottom" id="CYX-uk-6pd"/>
@@ -192,10 +192,10 @@
             </objects>
             <point key="canvasLocation" x="985" y="250"/>
         </scene>
-        <!--Rider View Controller-->
+        <!--Patient View Controller-->
         <scene sceneID="jAT-OB-UHS">
             <objects>
-                <viewController id="3Fb-bA-c4a" customClass="RiderViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Fb-bA-c4a" customClass="PatientViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="97Q-7e-M7s"/>
                         <viewControllerLayoutGuide type="bottom" id="ezg-cj-3Rw"/>
@@ -220,7 +220,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MM-Yj-Dey">
                                 <rect key="frame" x="74" y="548" width="228" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Call an Uber"/>
+                                <state key="normal" title="Call A Doctor"/>
                                 <connections>
                                     <action selector="callAnUber:" destination="3Fb-bA-c4a" eventType="touchUpInside" id="QQx-P0-vbp"/>
                                 </connections>

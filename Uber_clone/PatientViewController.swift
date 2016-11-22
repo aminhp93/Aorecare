@@ -1,5 +1,5 @@
 //
-//  RiderViewController.swift
+//  PatientViewController.swift
 //  Aorecare
 //
 //  Created by Minh Pham on 11/20/16.
@@ -10,13 +10,13 @@ import UIKit
 import Parse
 import MapKit
 
-class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var locationManager = CLLocationManager()
     
-    var riderRequestActive = true
+    var patientRequestActive = true
     
-    var driverOnTheWay = false
+    var doctorOnTheWay = false
     
     var userLocation:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
@@ -26,12 +26,12 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     
     @IBAction func callAnUber(_ sender: Any) {
         
-        if riderRequestActive {
-            callAnUber.setTitle("Call An Uber", for: [])
+        if patientRequestActive {
+            callAnUber.setTitle("Call A Doctor", for: [])
             
-            riderRequestActive = false
+            patientRequestActive = false
             
-            let query = PFQuery(className: "riderRequest")
+            let query = PFQuery(className: "PatientRequest")
             
             query.whereKey("username", equalTo: (PFUser.current()?.username)!)
             print(query)
@@ -42,7 +42,6 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
                 
                 if let objects = objects {
                     for i in objects{
-                        print("Deleted Uber")
                         i.deleteInBackground()
                     }
                 }
@@ -53,31 +52,30 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         if userLocation.latitude != 0 && userLocation.longitude != 0 {
             
-            riderRequestActive = true
+            patientRequestActive = true
             
-            let riderRequest = PFObject(className: "riderRequest")
+            let patientRequest = PFObject(className: "PatientRequest")
         
-            riderRequest["username"] = PFUser.current()?.username
+            patientRequest["username"] = PFUser.current()?.username
         
-            riderRequest["location"] = PFGeoPoint(latitude: userLocation.latitude, longitude: userLocation.longitude)
+            patientRequest["location"] = PFGeoPoint(latitude: userLocation.latitude, longitude: userLocation.longitude)
             
-            riderRequest.saveInBackground(block: { (success, error) in
+            patientRequest.saveInBackground(block: { (success, error) in
                 if success {
-                    print("Called an Uber")
-                    self.callAnUber.setTitle("Cancel Uber", for: [])
+                    self.callAnUber.setTitle("Cancel Doctor", for: [])
                 } else {
                     
-                    self.callAnUber.setTitle("Call An Uber", for: [])
+                    self.callAnUber.setTitle("Call A Doctor", for: [])
                     
-                    self.riderRequestActive = false
+                    self.patientRequestActive = false
                     
-                    self.displayAlert(title: "Could not call Uber", message: "Please try again")
+                    self.displayAlert(title: "Could not call Doctor", message: "Please try again")
                     
                 }
             })
             
         } else {
-            displayAlert(title: "Could bot call Uber", message: "Cannot detect your location")
+            displayAlert(title: "Could bot call Doctor", message: "Cannot detect your location")
         }
         }
     }
@@ -90,7 +88,7 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
             
             userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             
-            if driverOnTheWay == false {
+            if doctorOnTheWay == false {
             
                 let region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
                 
@@ -108,14 +106,14 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
             }
         
             
-            let query = PFQuery(className: "RiderRequest")
+            let query = PFQuery(className: "PatientRequest")
             
             query.whereKey("username", equalTo: (PFUser.current()?.username)!)
             
             query.findObjectsInBackground(block: { (objects, error) in
-                if let riderRequests = objects {
-                    for i in riderRequests{
-                        print("Deleted Uber")
+                if let patientRequests = objects {
+                    for i in patientRequests{
+                        
                         i["location"] = PFGeoPoint(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
                         i.saveInBackground()
                     }
@@ -123,34 +121,34 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
             })
         }
         
-        if riderRequestActive == true{
-            let query = PFQuery(className: "riderRequest")
+        if patientRequestActive == true{
+            let query = PFQuery(className: "PatientRequest")
             query.whereKey("username", equalTo: PFUser.current()?.username)
             
             query.findObjectsInBackground(block: { (objects, error) in
-                if let riderRequests = objects {
-                    for i in riderRequests {
-                        if let driverUsername = i["driverResponsed"]{
-                            let query = PFQuery(className: "driverLocation")
+                if let patientRequests = objects {
+                    for i in patientRequests {
+                        if let doctorUsername = i["DoctorResponded"]{
+                            let query = PFQuery(className: "DoctorLocation")
                             query.findObjectsInBackground(block: { (objects, error) in
-                                if let driverLocations = objects {
-                                    for j in driverLocations {
-                                        if let driverLocation = i["location"] as? PFGeoPoint {
+                                if let doctorLocations = objects {
+                                    for j in doctorLocations {
+                                        if let doctorLocation = i["location"] as? PFGeoPoint {
                                             
-                                            self.driverOnTheWay = true
+                                            self.doctorOnTheWay = true
                                             
-                                            let driverCLLocation = CLLocation(latitude: driverLocation.latitude, longitude: driverLocation.longitude)
+                                            let doctorCLLocation = CLLocation(latitude: doctorLocation.latitude, longitude: doctorLocation.longitude)
                                             
-                                            let riderCLLocation = CLLocation(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
+                                            let patientCLLocation = CLLocation(latitude: self.userLocation.latitude, longitude: self.userLocation.longitude)
                                             
-                                            let distance = riderCLLocation.distance(from: driverCLLocation) / 1000
+                                            let distance = patientCLLocation.distance(from: doctorCLLocation) / 1000
                                             
                                             let roundedDistance = round(distance*100)/100
                                             
-                                            self.callAnUber.setTitle("Driver is \(roundedDistance)km away", for: [])
+                                            self.callAnUber.setTitle("Doctor is \(roundedDistance)km away", for: [])
                                             
-                                            let latDelta = abs(driverLocation.latitude - self.userLocation.latitude) * 2 + 0.005
-                                            let lonDelta = abs(driverLocation.longitude - self.userLocation.longitude) * 2 + 0.005
+                                            let latDelta = abs(doctorLocation.latitude - self.userLocation.latitude) * 2 + 0.005
+                                            let lonDelta = abs(doctorLocation.longitude - self.userLocation.longitude) * 2 + 0.005
                                             
                                             let region = MKCoordinateRegion(center: self.userLocation, span: MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta))
                                             
@@ -168,7 +166,7 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
                                             
                                             let driverLocationAnnotation = MKPointAnnotation()
                                             
-                                            driverLocationAnnotation.coordinate = CLLocationCoordinate2D(latitude: driverLocation.latitude, longitude: driverLocation.longitude)
+                                            driverLocationAnnotation.coordinate = CLLocationCoordinate2D(latitude: doctorLocation.latitude, longitude: doctorLocation.longitude)
                                             
                                             driverLocationAnnotation.title = "Your driver"
                                             
@@ -204,16 +202,16 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         callAnUber.isHidden = true
         
-        let query = PFQuery(className: "RiderRequest")
+        let query = PFQuery(className: "PatientRequest")
         
         query.whereKey("username", equalTo: (PFUser.current()?.username)!)
         
         query.findObjectsInBackground(block: { (objects, error) in
             
-            if let riderRequests = objects {
-                if riderRequests.count > 0 {
-                    self.riderRequestActive = true
-                    self.callAnUber.setTitle("Cancel Uber", for: [])
+            if let patientRequests = objects {
+                if patientRequests.count > 0 {
+                    self.patientRequestActive = true
+                    self.callAnUber.setTitle("Cancel Doctor", for: [])
                 }
             }
             self.callAnUber.isHidden = false
