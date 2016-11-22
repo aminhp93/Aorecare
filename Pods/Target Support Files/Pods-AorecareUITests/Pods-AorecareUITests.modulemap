@@ -1,0 +1,6 @@
+framework module Pods_AorecareUITests {
+  umbrella header "Pods-AorecareUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

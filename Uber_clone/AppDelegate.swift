@@ -8,6 +8,8 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
+        
+        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+        
         Parse.enableLocalDatastore()
         
         let parseConfiguration = ParseClientConfiguration(block: { (ParseMutableClientConfiguration) -> Void in
@@ -94,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //            application.registerForRemoteNotificationTypes(types)
         //        }
         
-        return true
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     //--------------------------------------
@@ -103,8 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let installation = PFInstallation.current()
-        installation.setDeviceTokenFrom(deviceToken)
-        installation.saveInBackground()
+        installation?.setDeviceTokenFrom(deviceToken)
+        installation?.saveInBackground()
         
         PFPush.subscribeToChannel(inBackground: "") { (succeeded, error) in // (succeeded: Bool, error: NSError?) is now (succeeded, error)
             
@@ -150,6 +155,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
     //     return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, session:PFFacebookUtils.session())
     // }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let handle = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return handle
+    }
 
 }
 

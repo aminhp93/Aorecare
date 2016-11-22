@@ -1,0 +1,6 @@
+framework module Pods_AorecareTests {
+  umbrella header "Pods-AorecareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

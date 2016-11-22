@@ -8,14 +8,19 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func displayAlert(title:String, message:String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alertController, animated: true, completion: nil)
+        
+       
     }
     
     var signUpMode = true
@@ -130,6 +135,37 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let loginButton = FBSDKLoginButton()
+        view.addSubview(loginButton)
+        
+        loginButton.frame = CGRect(x: 16, y: 500, width: view.frame.width - 32, height: 50)
+        loginButton.delegate = self
+        
+        
+        var permission = ["public_profile"]
+        
+        PFFacebookUtils.logInInBackground(withReadPermissions: permission) { (user, error) in
+            if let error = error {
+                print(error)
+            } else {
+                if let user = user {
+                    print(user)
+                }
+            }
+        }
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did log out FB")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            print(error)
+        } else {
+            print("Successfully", result)
+        }
     }
 
     override func didReceiveMemoryWarning() {

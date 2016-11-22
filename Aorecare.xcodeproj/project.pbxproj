@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1115C578B704F31B7BBC6E59 /* Pods_AorecareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF07378B8E5D2DEAD2F956DC /* Pods_AorecareTests.framework */; };
 		2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962C1DE2A7EF0094F610 /* AppDelegate.swift */; };
 		2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962E1DE2A7EF0094F610 /* ViewController.swift */; };
 		274796321DE2A7EF0094F610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274796301DE2A7EF0094F610 /* Main.storyboard */; };
 		274796341DE2A7EF0094F610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274796331DE2A7EF0094F610 /* Assets.xcassets */; };
 		274796371DE2A7EF0094F610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274796351DE2A7EF0094F610 /* LaunchScreen.storyboard */; };
-		274796421DE2A7EF0094F610 /* Uber_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796411DE2A7EF0094F610 /* Uber_cloneTests.swift */; };
-		2747964D1DE2A7EF0094F610 /* Uber_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747964C1DE2A7EF0094F610 /* Uber_cloneUITests.swift */; };
+		274796421DE2A7EF0094F610 /* AorecareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796411DE2A7EF0094F610 /* AorecareTests.swift */; };
+		2747964D1DE2A7EF0094F610 /* AorecareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747964C1DE2A7EF0094F610 /* AorecareUITests.swift */; };
 		2747965D1DE2A9B00094F610 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2747965B1DE2A9B00094F610 /* Bolts.framework */; };
 		2747965E1DE2A9B00094F610 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2747965C1DE2A9B00094F610 /* Parse.framework */; };
 		274796601DE2AA0C0094F610 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2747965F1DE2AA0C0094F610 /* SystemConfiguration.framework */; };
@@ -23,6 +24,8 @@
 		274796681DE2B9430094F610 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796671DE2B9430094F610 /* PatientViewController.swift */; };
 		2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796691DE378A60094F610 /* DoctorViewController.swift */; };
 		2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */; };
+		504592D32723BEFF8F67816B /* Pods_Aorecare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02909398ACA33FFCF63B6DC /* Pods_Aorecare.framework */; };
+		64A3164EABBF434F7AA3AD19 /* Pods_AorecareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC04ACA5763FC18EB60B492 /* Pods_AorecareUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0063C5669F2C7A89EB918AA5 /* Pods-AorecareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AorecareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AorecareUITests/Pods-AorecareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1D5F649D888145E40C63474F /* Pods-AorecareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AorecareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AorecareUITests/Pods-AorecareUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		274796291DE2A7EF0094F610 /* Aorecare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aorecare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747962C1DE2A7EF0094F610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2747962E1DE2A7EF0094F610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,10 +56,10 @@
 		274796361DE2A7EF0094F610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274796381DE2A7EF0094F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2747963D1DE2A7EF0094F610 /* AorecareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AorecareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		274796411DE2A7EF0094F610 /* Uber_cloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uber_cloneTests.swift; sourceTree = "<group>"; };
+		274796411DE2A7EF0094F610 /* AorecareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AorecareTests.swift; sourceTree = "<group>"; };
 		274796431DE2A7EF0094F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		274796481DE2A7EF0094F610 /* AorecareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AorecareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2747964C1DE2A7EF0094F610 /* Uber_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uber_cloneUITests.swift; sourceTree = "<group>"; };
+		2747964C1DE2A7EF0094F610 /* AorecareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AorecareUITests.swift; sourceTree = "<group>"; };
 		2747964E1DE2A7EF0094F610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2747965B1DE2A9B00094F610 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2747965C1DE2A9B00094F610 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -65,6 +70,15 @@
 		274796671DE2B9430094F610 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		274796691DE378A60094F610 /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLocationViewController.swift; sourceTree = "<group>"; };
+		27E589AD1DE4346D0078CE60 /* Aorecare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aorecare.entitlements; sourceTree = SOURCE_ROOT; };
+		27E589AE1DE439090078CE60 /* Aorecare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aorecare-Bridging-Header.h"; sourceTree = "<group>"; };
+		3137911C97301652794C2FE9 /* Pods-Aorecare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aorecare.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aorecare/Pods-Aorecare.release.xcconfig"; sourceTree = "<group>"; };
+		4792785043319AB3D2B5956E /* Pods-AorecareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AorecareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AorecareTests/Pods-AorecareTests.release.xcconfig"; sourceTree = "<group>"; };
+		60DD885F8D4B6BC5E5A6F43A /* Pods-AorecareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AorecareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AorecareTests/Pods-AorecareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		718E50714441C5903E812649 /* Pods-Aorecare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aorecare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aorecare/Pods-Aorecare.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC04ACA5763FC18EB60B492 /* Pods_AorecareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AorecareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02909398ACA33FFCF63B6DC /* Pods_Aorecare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aorecare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF07378B8E5D2DEAD2F956DC /* Pods_AorecareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AorecareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 				274796601DE2AA0C0094F610 /* SystemConfiguration.framework in Frameworks */,
 				2747965E1DE2A9B00094F610 /* Parse.framework in Frameworks */,
 				2747965D1DE2A9B00094F610 /* Bolts.framework in Frameworks */,
+				504592D32723BEFF8F67816B /* Pods_Aorecare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1115C578B704F31B7BBC6E59 /* Pods_AorecareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A3164EABBF434F7AA3AD19 /* Pods_AorecareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +123,7 @@
 				2747964B1DE2A7EF0094F610 /* AorecareUITests */,
 				2747962A1DE2A7EF0094F610 /* Products */,
 				2747965A1DE2A9A00094F610 /* Frameworks */,
+				47C67FAAEFE9BF93BC771A9A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +140,7 @@
 		2747962B1DE2A7EF0094F610 /* Aorecare */ = {
 			isa = PBXGroup;
 			children = (
+				27E589AD1DE4346D0078CE60 /* Aorecare.entitlements */,
 				2747962C1DE2A7EF0094F610 /* AppDelegate.swift */,
 				2747962E1DE2A7EF0094F610 /* ViewController.swift */,
 				274796301DE2A7EF0094F610 /* Main.storyboard */,
@@ -131,6 +150,7 @@
 				274796331DE2A7EF0094F610 /* Assets.xcassets */,
 				274796351DE2A7EF0094F610 /* LaunchScreen.storyboard */,
 				274796381DE2A7EF0094F610 /* Info.plist */,
+				27E589AE1DE439090078CE60 /* Aorecare-Bridging-Header.h */,
 			);
 			name = Aorecare;
 			path = Uber_clone;
@@ -139,7 +159,7 @@
 		274796401DE2A7EF0094F610 /* AorecareTests */ = {
 			isa = PBXGroup;
 			children = (
-				274796411DE2A7EF0094F610 /* Uber_cloneTests.swift */,
+				274796411DE2A7EF0094F610 /* AorecareTests.swift */,
 				274796431DE2A7EF0094F610 /* Info.plist */,
 			);
 			name = AorecareTests;
@@ -149,7 +169,7 @@
 		2747964B1DE2A7EF0094F610 /* AorecareUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2747964C1DE2A7EF0094F610 /* Uber_cloneUITests.swift */,
+				2747964C1DE2A7EF0094F610 /* AorecareUITests.swift */,
 				2747964E1DE2A7EF0094F610 /* Info.plist */,
 			);
 			name = AorecareUITests;
@@ -165,8 +185,24 @@
 				2747965F1DE2AA0C0094F610 /* SystemConfiguration.framework */,
 				2747965B1DE2A9B00094F610 /* Bolts.framework */,
 				2747965C1DE2A9B00094F610 /* Parse.framework */,
+				B02909398ACA33FFCF63B6DC /* Pods_Aorecare.framework */,
+				DF07378B8E5D2DEAD2F956DC /* Pods_AorecareTests.framework */,
+				ACC04ACA5763FC18EB60B492 /* Pods_AorecareUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47C67FAAEFE9BF93BC771A9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				718E50714441C5903E812649 /* Pods-Aorecare.debug.xcconfig */,
+				3137911C97301652794C2FE9 /* Pods-Aorecare.release.xcconfig */,
+				60DD885F8D4B6BC5E5A6F43A /* Pods-AorecareTests.debug.xcconfig */,
+				4792785043319AB3D2B5956E /* Pods-AorecareTests.release.xcconfig */,
+				1D5F649D888145E40C63474F /* Pods-AorecareUITests.debug.xcconfig */,
+				0063C5669F2C7A89EB918AA5 /* Pods-AorecareUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 274796511DE2A7EF0094F610 /* Build configuration list for PBXNativeTarget "Aorecare" */;
 			buildPhases = (
+				6092E0025F3444325B09CC0C /* [CP] Check Pods Manifest.lock */,
 				274796251DE2A7EF0094F610 /* Sources */,
 				274796261DE2A7EF0094F610 /* Frameworks */,
 				274796271DE2A7EF0094F610 /* Resources */,
+				A3C439517B9D86BCBD0F7CED /* [CP] Embed Pods Frameworks */,
+				079E4EA39E1F2A08CE4C3AD9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 274796541DE2A7EF0094F610 /* Build configuration list for PBXNativeTarget "AorecareTests" */;
 			buildPhases = (
+				D39F523D3C5CC325FD4E9813 /* [CP] Check Pods Manifest.lock */,
 				274796391DE2A7EF0094F610 /* Sources */,
 				2747963A1DE2A7EF0094F610 /* Frameworks */,
 				2747963B1DE2A7EF0094F610 /* Resources */,
+				DC8CB383A8146D5F83D8EBC2 /* [CP] Embed Pods Frameworks */,
+				67B85554D79B502F92D512FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 274796571DE2A7EF0094F610 /* Build configuration list for PBXNativeTarget "AorecareUITests" */;
 			buildPhases = (
+				D343F04CA4D86443C6D7AE58 /* [CP] Check Pods Manifest.lock */,
 				274796441DE2A7EF0094F610 /* Sources */,
 				274796451DE2A7EF0094F610 /* Frameworks */,
 				274796461DE2A7EF0094F610 /* Resources */,
+				FD628AD2461DF8B70826F23D /* [CP] Embed Pods Frameworks */,
+				7B98A3B9DB22FB2E1935D8DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,7 +283,13 @@
 					274796281DE2A7EF0094F610 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = LVA22MYZ28;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2747963C1DE2A7EF0094F610 = {
 						CreatedOnToolsVersion = 8.1;
@@ -299,6 +350,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		079E4EA39E1F2A08CE4C3AD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aorecare/Pods-Aorecare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6092E0025F3444325B09CC0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67B85554D79B502F92D512FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AorecareTests/Pods-AorecareTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B98A3B9DB22FB2E1935D8DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AorecareUITests/Pods-AorecareUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C439517B9D86BCBD0F7CED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aorecare/Pods-Aorecare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D343F04CA4D86443C6D7AE58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D39F523D3C5CC325FD4E9813 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC8CB383A8146D5F83D8EBC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AorecareTests/Pods-AorecareTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD628AD2461DF8B70826F23D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AorecareUITests/Pods-AorecareUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		274796251DE2A7EF0094F610 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -316,7 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				274796421DE2A7EF0094F610 /* Uber_cloneTests.swift in Sources */,
+				274796421DE2A7EF0094F610 /* AorecareTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747964D1DE2A7EF0094F610 /* Uber_cloneUITests.swift in Sources */,
+				2747964D1DE2A7EF0094F610 /* AorecareUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +647,11 @@
 		};
 		274796521DE2A7EF0094F610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718E50714441C5903E812649 /* Pods-Aorecare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Aorecare.entitlements;
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,16 +659,21 @@
 				);
 				INFOPLIST_FILE = Uber_clone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.Uber-clone";
+				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Uber_clone/Aorecare-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		274796531DE2A7EF0094F610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3137911C97301652794C2FE9 /* Pods-Aorecare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Aorecare.entitlements;
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -484,14 +681,16 @@
 				);
 				INFOPLIST_FILE = Uber_clone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.Uber-clone";
+				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Uber_clone/Aorecare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		274796551DE2A7EF0094F610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60DD885F8D4B6BC5E5A6F43A /* Pods-AorecareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +705,7 @@
 		};
 		274796561DE2A7EF0094F610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4792785043319AB3D2B5956E /* Pods-AorecareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +720,7 @@
 		};
 		274796581DE2A7EF0094F610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5F649D888145E40C63474F /* Pods-AorecareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Uber_cloneUITests/Info.plist;
@@ -533,6 +734,7 @@
 		};
 		274796591DE2A7EF0094F610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0063C5669F2C7A89EB918AA5 /* Pods-AorecareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Uber_cloneUITests/Info.plist;
