@@ -26,6 +26,8 @@
 		27A7A5CF1DE4EF0B004859EB /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5CE1DE4EF0B004859EB /* SideBarTableViewController.swift */; };
 		27A7A5D11DE4F35E004859EB /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D01DE4F35E004859EB /* SideBar.swift */; };
 		27A7A5D31DE50874004859EB /* AccountSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D21DE50874004859EB /* AccountSettingViewController.swift */; };
+		27A7A5D51DE5106B004859EB /* BottomBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D41DE5106B004859EB /* BottomBarTableViewController.swift */; };
+		27A7A5D71DE51081004859EB /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A7A5D61DE51081004859EB /* BottomBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		27A7A5CE1DE4EF0B004859EB /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideBarTableViewController.swift; path = ../SideBarTableViewController.swift; sourceTree = "<group>"; };
 		27A7A5D01DE4F35E004859EB /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 		27A7A5D21DE50874004859EB /* AccountSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSettingViewController.swift; sourceTree = "<group>"; };
+		27A7A5D41DE5106B004859EB /* BottomBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarTableViewController.swift; sourceTree = "<group>"; };
+		27A7A5D61DE51081004859EB /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +135,10 @@
 				2747962C1DE2A7EF0094F610 /* AppDelegate.swift */,
 				2747962E1DE2A7EF0094F610 /* ViewController.swift */,
 				27A7A5CE1DE4EF0B004859EB /* SideBarTableViewController.swift */,
+				27A7A5D41DE5106B004859EB /* BottomBarTableViewController.swift */,
 				274796301DE2A7EF0094F610 /* Main.storyboard */,
 				27A7A5D01DE4F35E004859EB /* SideBar.swift */,
+				27A7A5D61DE51081004859EB /* BottomBar.swift */,
 				2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */,
 				274796691DE378A60094F610 /* DoctorViewController.swift */,
 				274796671DE2B9430094F610 /* PatientViewController.swift */,
@@ -319,8 +325,10 @@
 				27A7A5D31DE50874004859EB /* AccountSettingViewController.swift in Sources */,
 				274796681DE2B9430094F610 /* PatientViewController.swift in Sources */,
 				2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */,
+				27A7A5D71DE51081004859EB /* BottomBar.swift in Sources */,
 				27A7A5CF1DE4EF0B004859EB /* SideBarTableViewController.swift in Sources */,
 				2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */,
+				27A7A5D51DE5106B004859EB /* BottomBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

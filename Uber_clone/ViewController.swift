@@ -9,7 +9,13 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BottomBarDelegate {
+    
+    func bottomBarDidSelectButtonAtIndex(_ index: Int) {
+        
+    }
+    
+    var bottomBar:BottomBar = BottomBar()
     
     func displayAlert(title:String, message:String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -124,12 +130,19 @@ class ViewController: UIViewController {
             } else {
                 self.performSegue(withIdentifier: "showRiderViewController", sender: self)
             }
-        }    }
+        }
+        
+    }
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        bottomBar = BottomBar(sourceView: self.view, menuItems: ["Account Settings", "Payment", "Free Appoinment", "Help"])
+        bottomBar.delegate = self
+
     }
     
     override func didReceiveMemoryWarning() {

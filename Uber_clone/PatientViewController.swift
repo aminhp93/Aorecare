@@ -230,6 +230,9 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             performSegue(withIdentifier: "accountSetting", sender: nil)
         }
     }
+    
+ 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
