@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270CF9AC1DF492340095C830 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 270CF9AB1DF492340095C830 /* iCarousel.m */; };
+		270CF9B01DF494360095C830 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AD1DF494360095C830 /* 1.png */; };
+		270CF9B11DF494360095C830 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AE1DF494360095C830 /* 2.png */; };
+		270CF9B21DF494360095C830 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AF1DF494360095C830 /* 3.png */; };
 		2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962C1DE2A7EF0094F610 /* AppDelegate.swift */; };
 		2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962E1DE2A7EF0094F610 /* ViewController.swift */; };
 		274796321DE2A7EF0094F610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274796301DE2A7EF0094F610 /* Main.storyboard */; };
@@ -23,6 +27,9 @@
 		274796681DE2B9430094F610 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796671DE2B9430094F610 /* PatientViewController.swift */; };
 		2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796691DE378A60094F610 /* DoctorViewController.swift */; };
 		2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */; };
+		27F739461DF4A2A400731B6C /* NurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739451DF4A2A400731B6C /* NurseViewController.swift */; };
+		27F739481DF4A7DA00731B6C /* PhysioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739471DF4A7DA00731B6C /* PhysioViewController.swift */; };
+		27F7394A1DF4A7F300731B6C /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739491DF4A7F300731B6C /* CallendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270CF9A91DF492340095C830 /* Aorecare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aorecare-Bridging-Header.h"; sourceTree = "<group>"; };
+		270CF9AA1DF492340095C830 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		270CF9AB1DF492340095C830 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		270CF9AD1DF494360095C830 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		270CF9AE1DF494360095C830 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		270CF9AF1DF494360095C830 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		274796291DE2A7EF0094F610 /* Aorecare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aorecare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747962C1DE2A7EF0094F610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2747962E1DE2A7EF0094F610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +78,9 @@
 		274796671DE2B9430094F610 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		274796691DE378A60094F610 /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLocationViewController.swift; sourceTree = "<group>"; };
+		27F739451DF4A2A400731B6C /* NurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
+		27F739471DF4A7DA00731B6C /* PhysioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysioViewController.swift; sourceTree = "<group>"; };
+		27F739491DF4A7F300731B6C /* CallendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +143,19 @@
 				274796301DE2A7EF0094F610 /* Main.storyboard */,
 				2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */,
 				274796691DE378A60094F610 /* DoctorViewController.swift */,
+				27F739451DF4A2A400731B6C /* NurseViewController.swift */,
+				27F739471DF4A7DA00731B6C /* PhysioViewController.swift */,
+				27F739491DF4A7F300731B6C /* CallendarViewController.swift */,
 				274796671DE2B9430094F610 /* PatientViewController.swift */,
 				274796331DE2A7EF0094F610 /* Assets.xcassets */,
 				274796351DE2A7EF0094F610 /* LaunchScreen.storyboard */,
+				270CF9AA1DF492340095C830 /* iCarousel.h */,
+				270CF9AB1DF492340095C830 /* iCarousel.m */,
+				270CF9AD1DF494360095C830 /* 1.png */,
+				270CF9AE1DF494360095C830 /* 2.png */,
+				270CF9AF1DF494360095C830 /* 3.png */,
 				274796381DE2A7EF0094F610 /* Info.plist */,
+				270CF9A91DF492340095C830 /* Aorecare-Bridging-Header.h */,
 			);
 			name = Aorecare;
 			path = Uber_clone;
@@ -238,6 +263,7 @@
 					274796281DE2A7EF0094F610 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = LVA22MYZ28;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					2747963C1DE2A7EF0094F610 = {
@@ -278,6 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				274796371DE2A7EF0094F610 /* LaunchScreen.storyboard in Resources */,
+				270CF9B01DF494360095C830 /* 1.png in Resources */,
+				270CF9B11DF494360095C830 /* 2.png in Resources */,
+				270CF9B21DF494360095C830 /* 3.png in Resources */,
 				274796341DE2A7EF0094F610 /* Assets.xcassets in Resources */,
 				274796321DE2A7EF0094F610 /* Main.storyboard in Resources */,
 			);
@@ -304,11 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F739481DF4A7DA00731B6C /* PhysioViewController.swift in Sources */,
 				2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */,
 				2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */,
+				27F739461DF4A2A400731B6C /* NurseViewController.swift in Sources */,
 				274796681DE2B9430094F610 /* PatientViewController.swift in Sources */,
+				270CF9AC1DF492340095C830 /* iCarousel.m in Sources */,
 				2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */,
 				2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */,
+				27F7394A1DF4A7F300731B6C /* CallendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +503,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.Uber-clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Uber_clone/Aorecare-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -477,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LVA22MYZ28;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,6 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.Uber-clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Uber_clone/Aorecare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

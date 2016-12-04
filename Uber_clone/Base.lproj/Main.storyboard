@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IST-nv-Luc" id="FOr-3n-TW3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -192,7 +192,7 @@
             </objects>
             <point key="canvasLocation" x="985" y="250"/>
         </scene>
-        <!--Patient View Controller-->
+        <!--Data Source-->
         <scene sceneID="jAT-OB-UHS">
             <objects>
                 <viewController id="3Fb-bA-c4a" customClass="PatientViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
@@ -217,12 +217,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-PU-9wl">
-                                <rect key="frame" x="0.0" y="133" width="375" height="372"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-PU-9wl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="505" id="8St-Pi-6m3"/>
+                                </constraints>
                             </mapView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHf-W3-w1G" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="587" width="375" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="3Ax-f3-wzl"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="3Fb-bA-c4a" id="Vu2-2e-6vZ"/>
+                                    <outlet property="delegate" destination="3Fb-bA-c4a" id="HdY-ka-LXN"/>
+                                </connections>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzt-ip-v8j">
-                                <rect key="frame" x="56" y="544" width="264" height="35"/>
+                                <rect key="frame" x="0.0" y="504" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Call A Doctor"/>
                                 <connections>
@@ -231,18 +244,136 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mad-PU-9wl" secondAttribute="trailing" id="32V-QF-8Yx"/>
+                            <constraint firstItem="ezg-cj-3Rw" firstAttribute="top" secondItem="WHf-W3-w1G" secondAttribute="bottom" id="HvM-YD-X89"/>
+                            <constraint firstItem="Mad-PU-9wl" firstAttribute="leading" secondItem="jIy-Au-ep4" secondAttribute="leading" id="LkY-M2-4zs"/>
+                            <constraint firstItem="Mad-PU-9wl" firstAttribute="top" secondItem="jIy-Au-ep4" secondAttribute="top" id="Oyr-VX-kg6"/>
+                            <constraint firstAttribute="trailing" secondItem="WHf-W3-w1G" secondAttribute="trailing" id="Wre-ss-gBr"/>
+                            <constraint firstItem="WHf-W3-w1G" firstAttribute="leading" secondItem="jIy-Au-ep4" secondAttribute="leading" id="mdL-XV-1aV"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="callADoctor" destination="Hzt-ip-v8j" id="ufi-qj-K89"/>
+                        <outlet property="carouselView" destination="WHf-W3-w1G" id="t9N-Gv-067"/>
                         <outlet property="mapView" destination="Mad-PU-9wl" id="l5x-qi-PoF"/>
+                        <segue destination="MWk-Lk-SpX" kind="show" identifier="showNurseViewController" id="62p-jB-JdB"/>
+                        <segue destination="NOG-W0-3vZ" kind="show" identifier="showPhysioViewController" id="OAo-L7-r7F"/>
+                        <segue destination="Ohm-nC-dJU" kind="show" identifier="showCalenderViewController" id="gdO-1c-HR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzS-a9-oOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.60000000000002" y="-536.58170914542734"/>
         </scene>
+        <!--Nurse View Controller-->
+        <scene sceneID="ceH-jM-cbu">
+            <objects>
+                <viewController id="MWk-Lk-SpX" customClass="NurseViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pNi-CN-05e"/>
+                        <viewControllerLayoutGuide type="bottom" id="19H-r6-vRe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NvT-bF-xeI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nurser View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-Gb-lqE">
+                                <rect key="frame" x="29" y="70" width="317" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i9-SU-Bqj">
+                                <rect key="frame" x="44" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="3Fb-bA-c4a" kind="show" id="xnQ-2f-PqY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ce-j3-avY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="-1247"/>
+        </scene>
+        <!--Physio View Controller-->
+        <scene sceneID="obO-xH-CJ6">
+            <objects>
+                <viewController id="NOG-W0-3vZ" customClass="PhysioViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7hN-Vu-fas"/>
+                        <viewControllerLayoutGuide type="bottom" id="Coz-kO-kTy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qpo-UZ-HLt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Physio View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZh-gC-b94">
+                                <rect key="frame" x="-14" y="87" width="317" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHJ-2I-JhM">
+                                <rect key="frame" x="81" y="28" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="3Fb-bA-c4a" kind="show" id="WT5-XE-zTT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rk7-Ir-8Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="-1246"/>
+        </scene>
+        <!--Callendar View Controller-->
+        <scene sceneID="1W5-HJ-gRf">
+            <objects>
+                <viewController id="Ohm-nC-dJU" customClass="CallendarViewController" customModule="Aorecare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X6q-Q3-DyF"/>
+                        <viewControllerLayoutGuide type="bottom" id="rNh-M6-T84"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bPJ-A9-ajJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Callendar View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc3-Mf-geI">
+                                <rect key="frame" x="-30" y="86" width="317" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-g5-ZKf">
+                                <rect key="frame" x="81" y="28" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="3Fb-bA-c4a" kind="show" id="bb8-9o-vvy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUS-Xp-4zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2260" y="-1248"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="j00-DL-Yrs"/>
+        <segue reference="bb8-9o-vvy"/>
     </inferredMetricsTieBreakers>
 </document>

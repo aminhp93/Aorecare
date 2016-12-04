@@ -10,8 +10,10 @@ import UIKit
 import Parse
 import MapKit
 
-class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, iCarouselDelegate, iCarouselDataSource {
 
+    @IBOutlet weak var carouselView: iCarousel!
+    
     var locationManager = CLLocationManager()
     
     var patientRequestActive = true
@@ -214,6 +216,9 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             }
             self.callADoctor.isHidden = false
         })
+        
+        
+        carouselView.type = .linear
 
         // Do any additional setup after loading the view.
     }
@@ -233,6 +238,8 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         // Pass the selected object to the new view controller.
     }
     */
+    
+
 
     func displayAlert(title:String, message:String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -240,5 +247,53 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    var numbers = [Int]()
+    var imageArray:NSMutableArray = NSMutableArray()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageArray = ["1.png", "2.png", "3.png"]
+        
+    }
+  
+    public func numberOfItems(in carousel: iCarousel) -> Int {
+        return imageArray.count
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        var imageView: UIImageView!
+        
+        if view == nil{
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0 ,width: 200,height: 200))
+            imageView.contentMode = .scaleAspectFit
+        } else {
+            imageView = view as! UIImageView
+        }
+        
+        imageView.image = UIImage(named: "\(imageArray.object(at: index))")
+        return imageView
+    }
+    
+  
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        if index == 0{
+            print("0")
+            performSegue(withIdentifier: "showNurseViewController", sender: self.carouselView)
+
+        } else if (index == 1){
+            print("1")
+            performSegue(withIdentifier: "showPhysioViewController", sender: self.carouselView)
+
+        } else if (index == 2){
+            print("2")
+            performSegue(withIdentifier: "showCalenderViewController", sender: self.carouselView)
+
+        } else {
+            print("Not valid")
+        }
+    }
+    
+    
     
 }
