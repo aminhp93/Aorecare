@@ -10,7 +10,13 @@ import UIKit
 import Parse
 import MapKit
 
-class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, iCarouselDelegate, iCarouselDataSource {
+class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, iCarouselDelegate, iCarouselDataSource, SideBarDelegate {
+    
+    var sideBar:SideBar = SideBar()
+    
+    func sideBarDidSelectButtonAtIndex(_ index: Int) {
+        
+    }
 
     @IBOutlet weak var navigation: UINavigationBar!
     
@@ -226,6 +232,9 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         carouselView.type = .linear
         
+        
+        sideBar = SideBar(sourceView: self.view, menuItems: ["first", "second", "third"])
+        sideBar.delegate = self
 
         // Do any additional setup after loading the view.
     }

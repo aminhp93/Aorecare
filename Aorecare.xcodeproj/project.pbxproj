@@ -24,6 +24,8 @@
 		274796681DE2B9430094F610 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796671DE2B9430094F610 /* PatientViewController.swift */; };
 		2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796691DE378A60094F610 /* DoctorViewController.swift */; };
 		2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */; };
+		2780DED51DFB305A006015B1 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2780DED31DFB305A006015B1 /* SideBar.swift */; };
+		2780DED61DFB305A006015B1 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2780DED41DFB305A006015B1 /* SideBarTableViewController.swift */; };
 		27BF361B1DFA70E4006E3B3C /* ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36171DFA70E4006E3B3C /* ambulance.png */; };
 		27BF361C1DFA70E4006E3B3C /* bottle_of_pills.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36181DFA70E4006E3B3C /* bottle_of_pills.png */; };
 		27BF361D1DFA70E4006E3B3C /* injection.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36191DFA70E4006E3B3C /* injection.png */; };
@@ -79,6 +81,8 @@
 		274796671DE2B9430094F610 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		274796691DE378A60094F610 /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLocationViewController.swift; sourceTree = "<group>"; };
+		2780DED31DFB305A006015B1 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		2780DED41DFB305A006015B1 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		27BF36171DFA70E4006E3B3C /* ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ambulance.png; sourceTree = "<group>"; };
 		27BF36181DFA70E4006E3B3C /* bottle_of_pills.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle_of_pills.png; sourceTree = "<group>"; };
 		27BF36191DFA70E4006E3B3C /* injection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = injection.png; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			children = (
 				2747962C1DE2A7EF0094F610 /* AppDelegate.swift */,
 				2747962E1DE2A7EF0094F610 /* ViewController.swift */,
+				2780DED31DFB305A006015B1 /* SideBar.swift */,
+				2780DED41DFB305A006015B1 /* SideBarTableViewController.swift */,
 				274796301DE2A7EF0094F610 /* Main.storyboard */,
 				2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */,
 				274796691DE378A60094F610 /* DoctorViewController.swift */,
@@ -349,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2780DED51DFB305A006015B1 /* SideBar.swift in Sources */,
 				27F739481DF4A7DA00731B6C /* PhysioViewController.swift in Sources */,
 				2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */,
 				2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */,
@@ -358,6 +365,7 @@
 				2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */,
 				2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */,
 				27F7394A1DF4A7F300731B6C /* CallendarViewController.swift in Sources */,
+				2780DED61DFB305A006015B1 /* SideBarTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
