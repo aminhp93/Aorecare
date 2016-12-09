@@ -274,8 +274,8 @@
                                     <constraint firstAttribute="height" constant="44" id="fmh-He-SAy"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="GP9-kU-jIE">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="v7k-gq-tXJ">
+                                    <navigationItem title="Aerocare" id="GP9-kU-jIE">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="v7k-gq-tXJ">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="j00-DL-Yrs"/>
                                             </connections>
