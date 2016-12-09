@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		270CF9AC1DF492340095C830 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 270CF9AB1DF492340095C830 /* iCarousel.m */; };
-		270CF9B01DF494360095C830 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AD1DF494360095C830 /* 1.png */; };
-		270CF9B11DF494360095C830 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AE1DF494360095C830 /* 2.png */; };
-		270CF9B21DF494360095C830 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 270CF9AF1DF494360095C830 /* 3.png */; };
 		2747962D1DE2A7EF0094F610 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962C1DE2A7EF0094F610 /* AppDelegate.swift */; };
 		2747962F1DE2A7EF0094F610 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747962E1DE2A7EF0094F610 /* ViewController.swift */; };
 		274796321DE2A7EF0094F610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274796301DE2A7EF0094F610 /* Main.storyboard */; };
@@ -27,6 +24,13 @@
 		274796681DE2B9430094F610 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796671DE2B9430094F610 /* PatientViewController.swift */; };
 		2747966A1DE378A60094F610 /* DoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274796691DE378A60094F610 /* DoctorViewController.swift */; };
 		2747966C1DE38AA00094F610 /* PatientLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */; };
+		27BF361B1DFA70E4006E3B3C /* ambulance.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36171DFA70E4006E3B3C /* ambulance.png */; };
+		27BF361C1DFA70E4006E3B3C /* bottle_of_pills.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36181DFA70E4006E3B3C /* bottle_of_pills.png */; };
+		27BF361D1DFA70E4006E3B3C /* injection.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36191DFA70E4006E3B3C /* injection.png */; };
+		27BF361E1DFA70E4006E3B3C /* tooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF361A1DFA70E4006E3B3C /* tooth.png */; };
+		27BF36221DFA74A2006E3B3C /* bed.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF361F1DFA74A2006E3B3C /* bed.png */; };
+		27BF36231DFA74A2006E3B3C /* crutch.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36201DFA74A2006E3B3C /* crutch.png */; };
+		27BF36241DFA74A2006E3B3C /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 27BF36211DFA74A2006E3B3C /* eye.png */; };
 		27F739461DF4A2A400731B6C /* NurseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739451DF4A2A400731B6C /* NurseViewController.swift */; };
 		27F739481DF4A7DA00731B6C /* PhysioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739471DF4A7DA00731B6C /* PhysioViewController.swift */; };
 		27F7394A1DF4A7F300731B6C /* CallendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F739491DF4A7F300731B6C /* CallendarViewController.swift */; };
@@ -53,9 +57,6 @@
 		270CF9A91DF492340095C830 /* Aorecare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aorecare-Bridging-Header.h"; sourceTree = "<group>"; };
 		270CF9AA1DF492340095C830 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		270CF9AB1DF492340095C830 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		270CF9AD1DF494360095C830 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
-		270CF9AE1DF494360095C830 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
-		270CF9AF1DF494360095C830 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		274796291DE2A7EF0094F610 /* Aorecare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aorecare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747962C1DE2A7EF0094F610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2747962E1DE2A7EF0094F610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +79,13 @@
 		274796671DE2B9430094F610 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		274796691DE378A60094F610 /* DoctorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorViewController.swift; sourceTree = "<group>"; };
 		2747966B1DE38AA00094F610 /* PatientLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLocationViewController.swift; sourceTree = "<group>"; };
+		27BF36171DFA70E4006E3B3C /* ambulance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ambulance.png; sourceTree = "<group>"; };
+		27BF36181DFA70E4006E3B3C /* bottle_of_pills.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle_of_pills.png; sourceTree = "<group>"; };
+		27BF36191DFA70E4006E3B3C /* injection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = injection.png; sourceTree = "<group>"; };
+		27BF361A1DFA70E4006E3B3C /* tooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tooth.png; sourceTree = "<group>"; };
+		27BF361F1DFA74A2006E3B3C /* bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bed.png; sourceTree = "<group>"; };
+		27BF36201DFA74A2006E3B3C /* crutch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crutch.png; sourceTree = "<group>"; };
+		27BF36211DFA74A2006E3B3C /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		27F739451DF4A2A400731B6C /* NurseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseViewController.swift; sourceTree = "<group>"; };
 		27F739471DF4A7DA00731B6C /* PhysioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysioViewController.swift; sourceTree = "<group>"; };
 		27F739491DF4A7F300731B6C /* CallendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallendarViewController.swift; sourceTree = "<group>"; };
@@ -148,12 +156,16 @@
 				27F739491DF4A7F300731B6C /* CallendarViewController.swift */,
 				274796671DE2B9430094F610 /* PatientViewController.swift */,
 				274796331DE2A7EF0094F610 /* Assets.xcassets */,
+				27BF36171DFA70E4006E3B3C /* ambulance.png */,
+				27BF361F1DFA74A2006E3B3C /* bed.png */,
+				27BF36201DFA74A2006E3B3C /* crutch.png */,
+				27BF36211DFA74A2006E3B3C /* eye.png */,
+				27BF36181DFA70E4006E3B3C /* bottle_of_pills.png */,
+				27BF36191DFA70E4006E3B3C /* injection.png */,
+				27BF361A1DFA70E4006E3B3C /* tooth.png */,
 				274796351DE2A7EF0094F610 /* LaunchScreen.storyboard */,
 				270CF9AA1DF492340095C830 /* iCarousel.h */,
 				270CF9AB1DF492340095C830 /* iCarousel.m */,
-				270CF9AD1DF494360095C830 /* 1.png */,
-				270CF9AE1DF494360095C830 /* 2.png */,
-				270CF9AF1DF494360095C830 /* 3.png */,
 				274796381DE2A7EF0094F610 /* Info.plist */,
 				270CF9A91DF492340095C830 /* Aorecare-Bridging-Header.h */,
 			);
@@ -303,12 +315,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27BF361E1DFA70E4006E3B3C /* tooth.png in Resources */,
+				27BF361B1DFA70E4006E3B3C /* ambulance.png in Resources */,
 				274796371DE2A7EF0094F610 /* LaunchScreen.storyboard in Resources */,
-				270CF9B01DF494360095C830 /* 1.png in Resources */,
-				270CF9B11DF494360095C830 /* 2.png in Resources */,
-				270CF9B21DF494360095C830 /* 3.png in Resources */,
 				274796341DE2A7EF0094F610 /* Assets.xcassets in Resources */,
+				27BF361D1DFA70E4006E3B3C /* injection.png in Resources */,
+				27BF36221DFA74A2006E3B3C /* bed.png in Resources */,
+				27BF36231DFA74A2006E3B3C /* crutch.png in Resources */,
 				274796321DE2A7EF0094F610 /* Main.storyboard in Resources */,
+				27BF361C1DFA70E4006E3B3C /* bottle_of_pills.png in Resources */,
+				27BF36241DFA74A2006E3B3C /* eye.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

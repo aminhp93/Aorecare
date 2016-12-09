@@ -12,6 +12,8 @@ import MapKit
 
 class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, iCarouselDelegate, iCarouselDataSource {
 
+    @IBOutlet weak var navigation: UINavigationBar!
+    
     @IBOutlet weak var carouselView: iCarousel!
     
     var locationManager = CLLocationManager()
@@ -23,6 +25,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var userLocation:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     
     @IBOutlet weak var mapView: MKMapView!
+    
     
     @IBOutlet weak var callADoctor: UIButton!
     
@@ -195,6 +198,9 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -219,6 +225,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         
         carouselView.type = .linear
+        
 
         // Do any additional setup after loading the view.
     }
@@ -253,7 +260,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageArray = ["1.png", "2.png", "3.png"]
+        imageArray = ["ambulance.png", "bottle_of_pills.png", "injection.png", "tooth.png", "bed.png", "crutch.png", "eye.png"]
         
     }
   
@@ -265,7 +272,7 @@ class PatientViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         var imageView: UIImageView!
         
         if view == nil{
-            imageView = UIImageView(frame: CGRect(x: 0, y: 0 ,width: 200,height: 200))
+            imageView = UIImageView(frame: CGRect(x: 0, y: 0 ,width: 100,height: 100))
             imageView.contentMode = .scaleAspectFit
         } else {
             imageView = view as! UIImageView
